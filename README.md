@@ -13,26 +13,38 @@ Place these files directly in the root folder of your Raspberry Pi SD card. Thes
 
 ## Installation
 
-1. Copy all files directly to `/boot/firmware/` on your Raspberry Pi SD card:
+1. Copy all files directly to the root folder of your Raspberry Pi micro SD card:
 
 - `wifi_config.txt`
 - `wifi-setup.sh`
 - `wifi-setup.service`
 - `setup-wifi-service.sh`
 
-2. Make the installation script executable:
+2. Insert the SD card into your Raspberry Pi and power it on.
+
+3. Wait for the Raspberry Pi to boot up.
+
+4. Connect to the Raspberry Pi via SSH using the following command:
+
+```bash
+ssh pi@raspberrypi.local
+```
+
+Or use whatever IP address or network name you have set for the Raspberry Pi.
+
+5. Make the installation script executable:
 
 ```bash
 chmod +x /boot/firmware/setup-wifi-service.sh
 ```
 
-3. Run the installation script:
+6. Run the installation script:
 
 ```bash
 sudo /boot/firmware/setup-wifi-service.sh
 ```
 
-4. Edit the WiFi configuration:
+7. Edit the WiFi configuration:
    You can edit the configuration file directly on the SD card from your computer. So if you move somewhere to a new wifi you can just plug in the SD card and edit the file to setup a new wifi. No screen required.
 
 ```bash
@@ -55,6 +67,10 @@ YourHotSpot,YourPassword,1
 
 Higher priority number = higher priority (tried first).
 Automatically connects to the next one if the first one is not available.
+
+# Miscellaneous
+
+Here some commands that might be useful:
 
 ## Logs
 
