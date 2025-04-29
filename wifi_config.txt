@@ -1,0 +1,14 @@
+# WiFi Configuration File
+# Format: SSID,password,priority
+# Higher priority number = higher priority (tried first)
+
+# WiFi Networks
+# Primary network (highest priority)
+NetWorkName,NetworkPassword,3
+
+# Backup network (lowest priority)
+Net Work Name 2,password2,1
+
+# You can add more networks following the same format
+# SSID,password,priority 
+
