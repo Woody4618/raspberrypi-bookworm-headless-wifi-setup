@@ -142,3 +142,9 @@ sudo systemctl status NetworkManager
 ```bash
 nmcli device wifi list
 ```
+
+5. View all configured networks:
+
+```bash
+nmcli connection show | grep wifi
+```
