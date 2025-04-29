@@ -12,18 +12,18 @@ mkdir -p /var/log
 # Create configuration file if it doesn't exist
 if [ ! -f "/boot/firmware/wifi_config.txt" ]; then
     echo "Creating default wifi_config.txt..."
-    cp wifi_config.txt /boot/firmware/wifi_config.txt
+    cp /boot/firmware/wifi_config.txt /boot/firmware/wifi_config.txt
     echo "Please edit /boot/firmware/wifi_config.txt with your WiFi networks"
 fi
 
 # Copy the script to the correct location
 echo "Installing wifi-setup.sh..."
-cp wifi-setup.sh /usr/local/bin/
+cp /boot/firmware/wifi-setup.sh /usr/local/bin/
 chmod +x /usr/local/bin/wifi-setup.sh
 
 # Copy the service file
 echo "Installing wifi-setup.service..."
-cp wifi-setup.service /etc/systemd/system/
+cp /boot/firmware/wifi-setup.service /etc/systemd/system/
 
 # Reload systemd
 echo "Reloading systemd..."
