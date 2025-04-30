@@ -35,7 +35,7 @@ Or use whatever IP address or network name you have set for the Raspberry Pi.
 5. Make the installation script executable:
 
 ```bash
-chmod +x /boot/firmware/setup-wifi-service.sh
+sudo chmod +x /boot/firmware/setup-wifi-service.sh
 ```
 
 6. Run the installation script:
